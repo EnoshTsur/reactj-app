@@ -1,0 +1,73 @@
+@keyframes opacityAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.Container {
+    z-index: 10;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0.2rem;
+    width: 20rem;
+    font-family: 'Grenze, serif';
+    animation: opacityAnimation 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.TopStrip {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.TopStrip:hover {
+    cursor: move;
+}
+
+.TopStrip p {
+    margin: 0.5rem 0 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 0.5rem;
+    color: white;
+}
+
+.TopStrip .Close {
+    color: grey;
+}
+
+.Ok {
+
+    padding: 0.2rem 1.5rem;
+    outline: 1px dashed black;
+    margin: 0.5rem;
+    font-family: none;
+}
+
+
+
+.Ok:hover {
+    cursor: pointer;
+
+}
+
+.Ok:focus {
+    outline: none;
+}
+
+.Ok:active {
+    background-color: #eae0fd;
+}
+
+.Container .Close:hover {
+    cursor: not-allowed;
+}
+
+.Container p {
+    padding-left: 0.5rem;
+}

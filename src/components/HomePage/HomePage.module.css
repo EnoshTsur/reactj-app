@@ -1,0 +1,55 @@
+.Moon {
+    position: relative;
+    -webkit-animation: fly;
+    /* Safari 4.0 - 8.0 */
+    animation: fly;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes fly {
+    0% {  
+        top: 0;
+        right: 0;
+      }
+        25% {
+        top: -10px;
+        
+      }
+        50% {
+        top: 0;
+        
+      }
+        75% {
+        top: -5px;
+     
+      }
+        100% {
+        top: 0;
+        right: 0%;
+      }
+}
+
+@keyframes fly {
+    0% {  
+        top: 0;
+        right: 0;
+      }
+        25% {
+        top: -10px;
+        
+      }
+        50% {
+        top: 0;
+        
+      }
+        75% {
+        top: -5px;
+     
+      }
+        100% {
+        top: 0;
+        right: 0%;
+      }
+  }

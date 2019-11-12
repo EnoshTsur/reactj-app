@@ -1,0 +1,14 @@
+.List{
+    list-style: none;
+    letter-spacing: 0.2rem;
+}
+
+.List li {
+    margin: 0.5rem 0;
+}
+
+@media(max-width: 350px) {
+    .List{
+        font-size: 13px
+    }
+}

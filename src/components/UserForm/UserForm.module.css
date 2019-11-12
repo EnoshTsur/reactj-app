@@ -1,0 +1,75 @@
+/* webkit solution */
+::-webkit-input-placeholder { text-align:right; }
+/* mozilla solution */
+input:-moz-placeholder { text-align:right; }
+
+.Form {
+    position: fixed;
+    z-index: 2;
+    padding: 3rem;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Varela Round, sans-serif;
+    top: 50%;
+    left: 50%;
+    width: 20rem;
+    transform: translate(-50%, -50%);
+    text-align: right;
+}
+
+.Form h2 {
+    text-align: center;
+    font-family: Varela Round, sans-serif;
+
+}
+
+.FormData{
+    display: flex;
+    text-align: center;
+}
+
+.FormData input {
+    margin: 0 0.5rem;
+    min-height: 2rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid lightblue;
+    font-family: Varela Round, sans-serif;
+    flex-grow: 1;
+}
+
+.FormData input:hover {
+    border-bottom: 3px solid rgb(148, 203, 221);
+}
+
+.FormData input:focus {
+    outline: none;
+    text-align: right;
+    border-bottom: 3px solid rgb(148, 203, 221);
+    background-color: rgb(230, 230, 230);
+}
+
+.FormData Button {
+    flex-grow: 1;
+    font-family: Varela Round, sans-serif;
+}
+
+@media (max-width: 450px) {
+    .Form {
+        min-width: 100%;
+    }
+    .FormData {
+        flex-direction: column;
+    }
+
+    .FormData input {
+        max-width: 10rem;
+        margin: 0 auto;
+    }
+
+    .FormData Button {
+        max-width: 60%;
+        margin: 1rem auto;
+    }
+}

@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import Navigation from './components/Navigation/Navigation';
+import VideoContainer from './components/Videos/VideoContainer';
+import HomePage from './components/HomePage/HomePage';
+import Study from './components/Study/Study';
+import Dialog from './UI/Dialog/Dialog';
+import { isUserOnStorage, } from './dataSources/userService';
+import UserForm from './components/UserForm/UserForm';
+import Game from './components/Game/Game';
+import Code from './components/Code/CodeContainer';
+
+function DialogContainer() {
+  const [ isOpen, setOpen] = React.useState(false);
+  React.useEffect(() => setOpen(!isUserOnStorage()), []);
+
+  return (
+  <Dialog show={isOpen}>
+    { isOpen && <UserForm closeDialog={() => setOpen(false)}/> }
+  </Dialog>
+  );
+}
 
 function App() {
+  const history = createBrowserHistory();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <DialogContainer/>
+
+      <Navigation history={history}/>
+      <HashRouter history={history}>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/home" component={HomePage} />
+          <Route exact path="/videos" component={VideoContainer} />
+          <Route exact path="/study" component={Study} />
+          <Route exact path="/code" component={Code} />
+          <Route exact path="/iddqd" component={Game} />
+        </Switch>
+      </HashRouter>
     </div>
   );
 }
