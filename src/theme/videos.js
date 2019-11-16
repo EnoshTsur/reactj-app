@@ -92,6 +92,14 @@ const videos = Object.freeze({
         arraysQuestion3: {
             url: 'https://www.youtube.com/embed/vaoduBmYKF0',
             text: 'מערכים פתרון שאלה 3'
+        },
+        matrix: {
+            url: 'https://www.youtube.com/embed/Gut_X-KKoZY',
+            text: 'מערך דו מימדי'
+        },
+        objectDataToString: {
+            url: 'https://www.youtube.com/embed/n5mLkFY5vGQ',
+            text: 'אובייקטים דאטא וטו סטרינג'
         }
     }
 })

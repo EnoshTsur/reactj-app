@@ -11,6 +11,7 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
     const dataTypes = Object.values(codes.dataTypes);
     const operators = Object.values(codes.operators);
     const flow = Object.values(codes.flow);
+    const objects = Object.values(codes.objects)
 
      // The Menu
      const sideList = (
@@ -46,6 +47,16 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
                         }}
                         text="זרימה"
                         data={flow}
+                        setCurrentCode={setCurrentCode}
+                    />
+                </ListItem>
+                <ListItem button>
+                    <ExpendedCodeList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="אוביקטים"
+                        data={objects}
                         setCurrentCode={setCurrentCode}
                     />
                 </ListItem>

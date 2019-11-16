@@ -23,6 +23,14 @@ const codes = Object.freeze({
         arraysQuestion3: {
             url: 'EnoshTsur/8ae95d2874f25693d8afe5ed0dd6342e',
             text: 'שאלה 3 בחוברת'
+        },
+        matrix: {
+            url: 'EnoshTsur/9da25d4a86b451056e92f400db0a6214',
+            text: 'מערך דו מימדי'
+        },
+        matrixExercise: {
+            url: 'EnoshTsur/60646ec201d1ddc4c44ebf625040f2ef',
+            text: 'מערך דו מימדי תרגול'
         }
     },
 
@@ -87,6 +95,17 @@ const codes = Object.freeze({
             text: 'לולאה על מערך'
         }
 
+    },
+
+    objects: {
+        address: {
+            url: 'EnoshTsur/61972f12eb8b7164403091e79bffebde',
+            text: 'Address'
+        },
+        person: {
+            url: 'EnoshTsur/0c90bb21514415bac8637682ff9fe2b7',
+            text: 'Person'
+        }
     }
 });
 
