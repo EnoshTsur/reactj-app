@@ -9,6 +9,7 @@ function HomeWork() {
     const [isIntroOpen, setIntroOpen] = React.useState(false);
     const [isJavaBasicOpen, setJavaBasicOpen] = React.useState(false);
     const [isTaskExamOpen, setTaskExamOpen] = React.useState(false);
+    const [isObjectMethods, setObjectMethods] = React.useState(false);
 
     return (
         <div style={{
@@ -19,6 +20,7 @@ function HomeWork() {
             <div style={{ display: 'inline-block' }}>
                 <div style={{
                     display: 'flex',
+                    flexWrap: 'wrap',
                     flexDirection: 'row-reverse',
                     alignItems: 'center',
                     textAlign: 'center',
@@ -27,6 +29,7 @@ function HomeWork() {
                     <Button onClick={() => {
                         setJavaBasicOpen(false);
                         setTaskExamOpen(false)
+                        setObjectMethods(false)
                         setIntroOpen(true)
                     }}
                         style={{
@@ -42,6 +45,7 @@ function HomeWork() {
                     <Button onClick={() => {
                         setIntroOpen(false)
                         setTaskExamOpen(false)
+                        setObjectMethods(false)
                         setJavaBasicOpen(true)
                     }}
                         style={{
@@ -56,6 +60,7 @@ function HomeWork() {
                     <Button onClick={() => {
                         setIntroOpen(false)
                         setJavaBasicOpen(false)
+                        setObjectMethods(false)
                         setTaskExamOpen(true)
                     }}
                         style={{
@@ -66,6 +71,21 @@ function HomeWork() {
                         <p style={{
                             padding: '0.5rem'
                         }}> משימה לקראת מבחן</p>
+                    </Button>
+                    <Button onClick={() => {
+                        setIntroOpen(false)
+                        setJavaBasicOpen(false)
+                        setTaskExamOpen(false)
+                        setObjectMethods(true)
+                    }}
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                            fontSize: '16px'
+                        }}>
+                        {isJavaBasicOpen ? <LessIcon /> : <MoreIcon />}
+                        <p style={{
+                            padding: '0.5rem'
+                        }}> אובייקטים ומתודות</p>
                     </Button>
                 </div>
             </div>
@@ -118,7 +138,7 @@ function HomeWork() {
                     <p>בסוף המשחק כשנגמרו הקלפים, הכריזו על המנצח - זה עם הכי הרבה נקודות</p>
                     <p>לדוגמא: אבנר 27</p>
 
-                    <br/>
+                    <br />
                     <p><strong>בונוס</strong></p>
                     <p>כתבו את הקלפים במערך דו מימדי</p>
                     <p>השכבה הראשונה תסמל את הסדרות אחד עד ארבע</p>
@@ -127,6 +147,62 @@ function HomeWork() {
                     <p>ולחלק את הקופסא לשתי ידיים, של שני השחקנים</p>
                 </div>
             )}
+
+            {
+                isObjectMethods && (
+                    <div style={{
+                        padding: '1rem',
+                        textShadow: '0 0 2px 3px lightgrey'
+                    }}>
+                        <p><strong>צרו אובייקט שנקרא ArrayHandler</strong></p>
+                        <p>האובייקט מכיל משתנה מסוג מערך</p>
+                        <p>צרו קונסטרקטור שמקבל מערך ומאתחל את אותו המשתנה</p>
+                        <p>צרו בנוסף קונסטרקטור ריק שמאתחל את המערך עם 10 מספרים רנדומליים</p>
+
+                        <br/>
+
+                        <div style={{
+                            padding: '0.5rem',
+                            borderRadius: '5px',
+                            boxShadow: '0 1px 7px lightgrey'
+                        }}>
+                        <p><strong>צרו מתודה שמחזירה בוליאן ונקראת isBalanced</strong></p>
+                        <p>המתודה מקבלת אינט אינדקס</p>
+                        <p>המתודה מחזירה, האם המערך מאוזן או לא בהתאם לאינדקס</p>
+
+                        <p>זאת אומרת, מוודאה שסכום התאים עד לאינדקס שווה לסכום התאים מהאינדקס עד הסוף</p>
+                        </div>
+
+                        <br/>
+
+                        <div style={{
+                            padding: '0.5rem',
+                            borderRadius: '5px',
+                            boxShadow: '0 1px 7px lightgrey'
+                        }}>
+                        <p><strong>צרו מתודה שמחזירה מערך ונקראת getDuplicates</strong></p>
+                        <p>המתודה לא מקבלת כלום</p>
+                        <p>המתודה מחזירה מערך חדש עם כל הכפילויות במערך של האובייקט עצמו</p>
+
+                        </div>
+
+                        <br/>
+
+                        <div style={{
+                            padding: '0.5rem',
+                            borderRadius: '5px',
+                            boxShadow: '0 1px 7px lightgrey'
+                        }}>
+                        <p><strong>צרו מתודה שמחזירה אינט howManyIn</strong></p>
+                        <p>המתודה מקבלת מערך</p>
+                        <p>המתודה מחזירה כמה איברים במערך החדש קיימים גם המערך של אותו האובייקט</p>
+
+                        </div>
+
+
+                    </div>
+                )
+            }
         </div>
     )
 }
