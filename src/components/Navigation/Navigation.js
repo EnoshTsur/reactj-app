@@ -10,8 +10,6 @@ import { HashRouter, Link } from 'react-router-dom';
 import classes from './Navigation.module.css';
 import BlackAlert from '../BlackAlert/BlackAlert';
 import { navigateTo,} from '../../theme/utils';
-import { setAtiveTabOnStorgae, getActiveTabOnStorage, } 
-from '../../activeNavTab/activeNavTab';
 
 
 function Navigation({ history, }) {
@@ -24,12 +22,6 @@ function Navigation({ history, }) {
     const [isBlackAlert, setBlackAlert,] = React.useState(false);
     const [activeTab, setActiveTab] = React.useState(HOME)
 
-    React.useEffect(() => {
-        if(getActiveTabOnStorage()) {
-            setActiveTab(getActiveTabOnStorage())
-            navigateTo(getActiveTabOnStorage())()
-        }
-    }, [])
 
     React.useEffect(() => {
         const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -38,7 +30,6 @@ function Navigation({ history, }) {
     }, []);
 
     function handleClick(who) {
-        setAtiveTabOnStorgae(who)
         setActiveTab(who)
     }
 

@@ -46,7 +46,7 @@ function ExpendedList({ text, data, setCurrentVideo}) {
                 }
                 <p>{text}</p>
             </div>
-            {isOpen && data.map(videoObj => {
+            {isOpen && data.reverse().map(videoObj => {
                 return (
                     <Button
                         variant="text"

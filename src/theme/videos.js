@@ -100,6 +100,22 @@ const videos = Object.freeze({
         objectDataToString: {
             url: 'https://www.youtube.com/embed/n5mLkFY5vGQ',
             text: 'אובייקטים דאטא וטו סטרינג'
+        },
+        ctroverloadsMethods: {
+            url: 'https://www.youtube.com/embed/yYWms2BxkDA',
+            text: 'קונסטרקטור אוברלאוד ומתודות'
+        },
+        gettersAndSetters :{
+            url: 'https://www.youtube.com/embed/JXZ937p278U',
+            text: 'גטרים וסטרים'
+        },
+        hashcodeAndEquals: {
+            url: 'https://www.youtube.com/embed/ZLjNacDbLkc',
+            text: 'האש קוד ואיקואלס'
+        },
+        staticFinal: {
+            url: 'https://www.youtube.com/embed/VSt9uqs43p4',
+            text: 'סטטיק פיינל'
         }
     }
 })

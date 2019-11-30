@@ -105,6 +105,18 @@ const codes = Object.freeze({
         person: {
             url: 'EnoshTsur/0c90bb21514415bac8637682ff9fe2b7',
             text: 'Person'
+        },
+        gettersAndSetters: {
+            url: 'EnoshTsur/131c3ac1b9f52e11189d95054b08bc29',
+            text: 'Getters & Setters'
+        },
+        hashcodeAndEquals: {
+            url: 'EnoshTsur/f7ca456f30a9e7efebe406d50b177caa',
+            text: 'Hash code & Equals'
+        },
+        staticFinal: {
+            url: 'EnoshTsur/67299cbb4be5f5addc7a07ba3fcae2ec',
+            text: 'Static & Final'
         }
     }
 });

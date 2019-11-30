@@ -20,16 +20,18 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                 <CloseIcon />
             </Button>
             <List>
+
                 <ListItem button>
                     <ExpendedList
                         style={{
                             fontFamily: "Varela Round, sans-serif",
                         }}
-                        text="מבוא לתכנות"
-                        data={devIntroduction}
+                        text="Java Basic"
+                        data={javaBasicVideos}
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>
+                
                 <ListItem button>
                     <ExpendedList
                         style={{
@@ -40,13 +42,14 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>
+
                 <ListItem button>
                     <ExpendedList
                         style={{
                             fontFamily: "Varela Round, sans-serif",
                         }}
-                        text="Java Basic"
-                        data={javaBasicVideos}
+                        text="מבוא לתכנות"
+                        data={devIntroduction}
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>

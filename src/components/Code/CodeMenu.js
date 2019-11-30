@@ -20,26 +20,20 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
                 <CloseIcon />
             </Button>
             <List>
+                
+               
                 <ListItem button>
                     <ExpendedCodeList
                         style={{
                             fontFamily: "Varela Round, sans-serif",
                         }}
-                        text="דאטא טייפ"
-                        data={dataTypes}
+                        text="אוביקטים"
+                        data={objects}
                         setCurrentCode={setCurrentCode}
                     />
                 </ListItem>
-                <ListItem button>
-                    <ExpendedCodeList
-                        style={{
-                            fontFamily: "Varela Round, sans-serif",
-                        }}
-                        text="אופרטורים"
-                        data={operators}
-                        setCurrentCode={setCurrentCode}
-                    />
-                </ListItem>
+
+
                 <ListItem button>
                     <ExpendedCodeList
                         style={{
@@ -50,13 +44,25 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
                         setCurrentCode={setCurrentCode}
                     />
                 </ListItem>
+
                 <ListItem button>
                     <ExpendedCodeList
                         style={{
                             fontFamily: "Varela Round, sans-serif",
                         }}
-                        text="אוביקטים"
-                        data={objects}
+                        text="אופרטורים"
+                        data={operators}
+                        setCurrentCode={setCurrentCode}
+                    />
+                </ListItem>
+
+                <ListItem button>
+                    <ExpendedCodeList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="דאטא טייפ"
+                        data={dataTypes}
                         setCurrentCode={setCurrentCode}
                     />
                 </ListItem>

@@ -37,7 +37,7 @@ function ExpendedCodeList({ text, data, setCurrentCode}) {
                 }
                 <p>{text}</p>
             </div>
-            {isOpen && data.map(codeObj => {
+            {isOpen && data.reverse().map(codeObj => {
                 return (
                     <Button
                         variant="text"
