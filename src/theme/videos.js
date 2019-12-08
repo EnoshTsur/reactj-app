@@ -51,6 +51,12 @@ const videos = Object.freeze({
             text: 'גיט מהבסיס',
         },
     },
+    bank: {
+        bankOverview: {
+            url: 'https://www.youtube.com/embed/Ze5de_kogNQ',
+            text: 'משימת הבנק'
+        }
+    },
     basicJava: {
         platform: {
             url: 'https://www.youtube.com/embed/mg-1pX83GWg',
@@ -116,6 +122,10 @@ const videos = Object.freeze({
         staticFinal: {
             url: 'https://www.youtube.com/embed/VSt9uqs43p4',
             text: 'סטטיק פיינל'
+        },
+        inheritance: {
+            url: 'https://www.youtube.com/embed/x7XsQ0mXiXA',
+            text: 'הורשה'
         }
     }
 })

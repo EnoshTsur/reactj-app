@@ -118,6 +118,49 @@ const codes = Object.freeze({
             url: 'EnoshTsur/67299cbb4be5f5addc7a07ba3fcae2ec',
             text: 'Static & Final'
         }
+    },
+
+    bank: {
+        account: {
+            url: 'EnoshTsur/794c100327bd060c89320dfe14a1a15c',
+            text: 'Account'
+        },
+        client: {
+            url: 'EnoshTsur/ba6e696f58cf5254be0c141e4b4141e9',
+            text: 'Client'
+        },
+        idGenerator: {
+            url: 'EnoshTsur/784f3063ae96d91bffd6c607fad76297',
+            text: 'IdGenerator'
+        },
+        rank: {
+            url: 'EnoshTsur/8c0af1e2040c36a96f9652522027c162',
+            text: 'Rank'
+        },
+        main: {
+            url: 'EnoshTsur/f5a43fbd1c1512de2322acd506a8c90f',
+            text: 'Main'
+        }
+
+    },
+
+    inheritance: {
+        animal: {
+            url: 'EnoshTsur/527c18f7430bd98765b17277e8bbde35',
+            text: 'Animal'
+        },
+        cat: {
+            url: 'EnoshTsur/3876d6786f335ae0c161358fde836700',
+            text: 'Cat'
+        },
+        dog: {
+            url: 'EnoshTsur/c49f352a423bba5166d12f45ea0a7daa',
+            text: 'Dog'
+        },
+        main: {
+            url: 'EnoshTsur/4ff61e1c60e7d9a546bd2849b1c00130',
+            text: 'Main'
+        }
     }
 });
 

@@ -12,6 +12,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const devIntroduction = Object.values(videos.devIntroduction);
     const gitVideos = Object.values(videos.gitVideos);
     const javaBasicVideos = Object.values(videos.basicJava);
+    const bankOverview = Object.values(videos.bank);
 
     // The Menu
     const sideList = (
@@ -31,7 +32,18 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>
-                
+
+                <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="Bank Task"
+                        data={bankOverview}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
+
                 <ListItem button>
                     <ExpendedList
                         style={{

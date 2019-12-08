@@ -12,6 +12,8 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
     const operators = Object.values(codes.operators);
     const flow = Object.values(codes.flow);
     const objects = Object.values(codes.objects)
+    const bank = Object.values(codes.bank);
+    const inheritance = Object.values(codes.inheritance);
 
      // The Menu
      const sideList = (
@@ -20,7 +22,28 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
                 <CloseIcon />
             </Button>
             <List>
+
+            <ListItem button>
+                    <ExpendedCodeList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="הורשה"
+                        data={inheritance}
+                        setCurrentCode={setCurrentCode}
+                    />
+                </ListItem>
                 
+            <ListItem button>
+                    <ExpendedCodeList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="בנק"
+                        data={bank}
+                        setCurrentCode={setCurrentCode}
+                    />
+                </ListItem>
                
                 <ListItem button>
                     <ExpendedCodeList
