@@ -14,6 +14,9 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
     const objects = Object.values(codes.objects)
     const bank = Object.values(codes.bank);
     const inheritance = Object.values(codes.inheritance);
+    const abstract = Object.values(codes.abstract);
+    const inter = Object.values(codes.interface);
+    const enums = Object.values(codes.enums);
 
      // The Menu
      const sideList = (
@@ -22,6 +25,39 @@ function CodeMenu({ codes, isOpen, toggleOpen, setCurrentCode, }) {
                 <CloseIcon />
             </Button>
             <List>
+
+            <ListItem button>
+                    <ExpendedCodeList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="אינם"
+                        data={enums}
+                        setCurrentCode={setCurrentCode}
+                    />
+                </ListItem>
+
+            <ListItem button>
+                    <ExpendedCodeList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="אינטרפייס"
+                        data={inter}
+                        setCurrentCode={setCurrentCode}
+                    />
+                </ListItem>
+
+            <ListItem button>
+                    <ExpendedCodeList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="אבסטרקט"
+                        data={abstract}
+                        setCurrentCode={setCurrentCode}
+                    />
+                </ListItem>
 
             <ListItem button>
                     <ExpendedCodeList

@@ -2,9 +2,7 @@ import React from 'react'
 import MoreIcon from '@material-ui/icons/ExpandMore'
 import LessIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button';
-import { updateWatchedVideos, updateFavoriteVideo,} from '../../../dataSources/userService';
 import { setPreviousVideo, } from '../../../video/video';
-import { addWatch,} from '../../../video/video';
 
 const iconStyle = {
     padding: '0 1rem',
@@ -20,13 +18,6 @@ function ExpendedList({ text, data, setCurrentVideo}) {
 
     function handleClick(url, text) {
         setCurrent(url, text);
-        try{
-        addWatch(text);
-        updateWatchedVideos();
-        updateFavoriteVideo();
-        } catch (e) {
-            console.error(e);
-        }
         setPreviousVideo({url, text});
     }
 

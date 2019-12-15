@@ -4,8 +4,6 @@ import Button from '@material-ui/core/Button';
 import { setUserStorage, create,} from '../../dataSources/userService';
 import User from '../../entity/User';
 
-import { setVideoStatistics } from '../../video/video';
-
 function UserForm({ closeDialog, }) {
 
     function submit() {
@@ -14,7 +12,6 @@ function UserForm({ closeDialog, }) {
             create(user).then(id => {
                 user['_id'] = id;
                 setUserStorage(user);
-                setVideoStatistics();
             });
         } catch (e) {
             console.error(e)
@@ -38,7 +35,7 @@ function UserForm({ closeDialog, }) {
                     type="text"
                     placeholder="שם משתמש"
                     onChange={e => handleInputChange(e.target.value)}
-                    maxlength="11"
+                    maxLength="11"
                 />
                 <Button
                     onClick={submit}

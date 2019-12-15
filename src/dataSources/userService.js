@@ -1,5 +1,3 @@
-import { getVideoStatistics, } from '../video/video';
-
 const localStorageKey = 'java-course-user-storage';
 
 
@@ -15,7 +13,7 @@ const relativeService = Object.freeze({
     readAll: "/users/readAll",
 });
 
-const path = {...relativeService}
+const path = {...localService}
 
 function isUserOnStorage() {
     return localStorage.getItem(localStorageKey) != null;
@@ -35,31 +33,6 @@ function getUserFromStorage() {
 function setUserStorage(user) {
     localStorage.setItem(localStorageKey, JSON.stringify(user));
     return user;
-}
-
-function updateWatchedVideos() {
-    const user = getUserFromStorage();
-    const videos = Object.keys(getVideoStatistics());
-    user.watchedVideos = videos;
-    setUserStorage(user);
-    update(user);
-}
-
-function updateFavoriteVideo() {
-    const user = getUserFromStorage();
-    const videoStatistics = getVideoStatistics();
-    const fav = { name: '', status: 0 }
-
-    user.watchedVideos = Object.keys(videoStatistics);
-    Object.entries(videoStatistics).forEach(([name, status]) => {
-        if (status > fav.status) {
-            fav.name = name;
-            fav.status = status;
-        }
-    });
-    user.favVideo = fav.name;
-    setUserStorage(user);
-    update(user);
 }
 
 async function create(user) {
@@ -94,8 +67,6 @@ export {
     isUserOnStorage,
     setUserStorage,
     getUserFromStorage,
-    updateWatchedVideos,
-    updateFavoriteVideo,
     create,
     update,
 }

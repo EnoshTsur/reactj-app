@@ -161,6 +161,54 @@ const codes = Object.freeze({
             url: 'EnoshTsur/4ff61e1c60e7d9a546bd2849b1c00130',
             text: 'Main'
         }
+    },
+
+    abstract: {
+        animal: {
+            url: 'EnoshTsur/996c232c3834fcd5dfe62b76c1e7f6e2',
+            text: 'Animal'
+        },
+        cat: {
+            url: 'EnoshTsur/a96fd6640482090b740ae043a80e00ca',
+            text: 'Cat'
+        },
+        dog: {
+            url: 'EnoshTsur/129047a81345236418654c060b8f9a79',
+            text: 'Dog'
+        },
+        main: {
+            url: 'EnoshTsur/313def76c9850d3eb812fc3e2914b99b',
+            text: 'main'
+        }
+    },
+
+    interface: {
+        greet: {
+            url: 'EnoshTsur/4c8172140a31afca77e47f50167b0082',
+            text: 'Greet'
+        },
+        english: {
+            url: 'EnoshTsur/aa92dce37a2ca8ec2600a9f4fe713e07',
+            text: 'English'
+        },
+        hebrew: {
+            url: 'EnoshTsur/8f2af7817f3ba2efcec948b3bd272e0f',
+            text: 'Hebrew'
+        }
+    },
+    enums: {
+        dayType: {
+            url: 'EnoshTsur/edf37ff80500c912ab5b48d1a9514720',
+            text: 'DayType'
+        },
+        day: {
+            url: 'EnoshTsur/4d4ccad0efb552f5afcea6a0964df097',
+            text: 'Day'
+        },
+        main: {
+            url: 'EnoshTsur/82d150c9187ffdd48509489ae2fb4fba',
+            text: 'Main'
+        }
     }
 });
 

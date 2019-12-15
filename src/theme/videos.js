@@ -126,6 +126,22 @@ const videos = Object.freeze({
         inheritance: {
             url: 'https://www.youtube.com/embed/x7XsQ0mXiXA',
             text: 'הורשה'
+        },
+        abstract: {
+            url: 'https://www.youtube.com/embed/v3FOtTYRVIU',
+            text: 'אבסטרקט'
+        },
+        interface: {
+            url: 'https://www.youtube.com/embed/CPF6Ytvd2oc',
+            text: 'אינטרפייס'
+        },
+        polyAnony: {
+            url: 'https://www.youtube.com/embed/YabrQv7LgXk',
+            text: 'פולימורפיזם וקלאס אנונימי'
+        },
+        enums: {
+            url: 'https://www.youtube.com/embed/4CEjzSqTXTg',
+            text: 'אינם'
         }
     }
 })
