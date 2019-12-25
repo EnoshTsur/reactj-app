@@ -142,6 +142,18 @@ const videos = Object.freeze({
         enums: {
             url: 'https://www.youtube.com/embed/4CEjzSqTXTg',
             text: 'אינם'
+        },
+        gerenics: {
+            url: 'https://www.youtube.com/embed/S8x_8KF4K14',
+            text: 'מחלקות גנאריות'
+        },
+        collections: {
+            url: 'https://www.youtube.com/embed/fI347GAqJtU',
+            text: 'אוספים'
+        },
+        dates: {
+            url: 'https://www.youtube.com/embed/5OA68y77DwE',
+            text: 'תאריכים'
         }
     }
 })
