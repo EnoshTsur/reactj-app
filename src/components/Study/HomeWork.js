@@ -4,14 +4,14 @@ import MoreIcon from '@material-ui/icons/ExpandMore'
 import LessIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button'
 
-const boxStyle =  {
+const boxStyle = isMobile =>  ({
 
-    boxShadow: '0 3px 4px 2px #ccc',
+    boxShadow: isMobile ? 'unset' : '0 3px 4px 2px #ccc',
     padding: '1rem',
     margin: '1rem',
     borderRadius: '5px',
-    minWidth: '30rem'
-};
+    minWidth: isMobile ? 'unset' : '30rem'
+});
 
 function HomeWork() {
     const [isIntroOpen, setIntroOpen] = React.useState(false);
@@ -19,6 +19,14 @@ function HomeWork() {
     const [isTaskExamOpen, setTaskExamOpen] = React.useState(false);
     const [isObjectMethods, setObjectMethods] = React.useState(false);
     const [isOopExamOpen, setOopExamOpen] = React.useState(false);
+
+    const [isMobile, setMobile] = React.useState(false);
+
+    React.useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        setMobile(mediaQuery.matches);
+        mediaQuery.addListener((mq) => setMobile(mq.matches));
+    }, []);
 
     return (
         <div style={{
@@ -243,7 +251,7 @@ function HomeWork() {
                             flexWrap: 'wrap',
                             direction: 'rtl',
                         }}>
-                            <div style={boxStyle}>
+                            <div style={boxStyle(isMobile)}>
                                 <p><strong>הכנה למטלת אובג'קט אוריינטד</strong></p>
                                 <a target="_blank" href="https://github.com/EnoshTsur/Java-822-119/tree/master/BeforeTest/src">הפרויקט מהכיתה</a>
                                 <br />
@@ -257,7 +265,7 @@ function HomeWork() {
 
                             </div>
 
-                            <div style={boxStyle}>
+                            <div style={boxStyle(isMobile)}>
                                 <p><strong>כתבו תוכנית המדפיסה את הנתונים הבאים</strong></p>
                                 <br/>
                                 <p>ממוצע המשכורות של החברה</p>
@@ -269,7 +277,7 @@ function HomeWork() {
                                 <p>העובד הכי מבוגר עם ממוצע המשכורות הכי גבוה</p>
                                 <p>העובד הכי צעיר עם ממוצע המשכורות הכי גבוה</p>
                             </div>
-                            <div style={boxStyle}>
+                            <div style={boxStyle(isMobile)}>
                                 <p><strong>משכורות</strong></p>
                                 <br/>
                                 <p>עובד פיתוח 14000 - 18000</p>

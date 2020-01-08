@@ -13,7 +13,7 @@ const relativeService = Object.freeze({
     readAll: "/users/readAll",
 });
 
-const path = {...relativeService}
+const path = {...localService}
 
 function isUserOnStorage() {
     return localStorage.getItem(localStorageKey) != null;

@@ -14,7 +14,7 @@ const relativeService = Object.freeze({
     readAll: '/secret/readAll',
 })
 
-const path = {...relativeService};
+const path = {...localService};
 
 function isSecretOnStorage() {
     return localStorage.getItem(localStorageKey) != null;
