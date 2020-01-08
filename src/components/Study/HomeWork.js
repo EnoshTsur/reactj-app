@@ -4,12 +4,21 @@ import MoreIcon from '@material-ui/icons/ExpandMore'
 import LessIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button'
 
+const boxStyle =  {
+
+    boxShadow: '0 3px 4px 2px #ccc',
+    padding: '1rem',
+    margin: '1rem',
+    borderRadius: '5px',
+    minWidth: '30rem'
+};
 
 function HomeWork() {
     const [isIntroOpen, setIntroOpen] = React.useState(false);
     const [isJavaBasicOpen, setJavaBasicOpen] = React.useState(false);
     const [isTaskExamOpen, setTaskExamOpen] = React.useState(false);
     const [isObjectMethods, setObjectMethods] = React.useState(false);
+    const [isOopExamOpen, setOopExamOpen] = React.useState(false);
 
     return (
         <div style={{
@@ -30,6 +39,7 @@ function HomeWork() {
                         setJavaBasicOpen(false);
                         setTaskExamOpen(false)
                         setObjectMethods(false)
+                        setOopExamOpen(false)
                         setIntroOpen(true)
                     }}
                         style={{
@@ -46,6 +56,7 @@ function HomeWork() {
                         setIntroOpen(false)
                         setTaskExamOpen(false)
                         setObjectMethods(false)
+                        setOopExamOpen(false)
                         setJavaBasicOpen(true)
                     }}
                         style={{
@@ -61,6 +72,7 @@ function HomeWork() {
                         setIntroOpen(false)
                         setJavaBasicOpen(false)
                         setObjectMethods(false)
+                        setOopExamOpen(false)
                         setTaskExamOpen(true)
                     }}
                         style={{
@@ -76,6 +88,7 @@ function HomeWork() {
                         setIntroOpen(false)
                         setJavaBasicOpen(false)
                         setTaskExamOpen(false)
+                        setOopExamOpen(false)
                         setObjectMethods(true)
                     }}
                         style={{
@@ -86,6 +99,22 @@ function HomeWork() {
                         <p style={{
                             padding: '0.5rem'
                         }}> אובייקטים ומתודות</p>
+                    </Button>
+                    <Button onClick={() => {
+                        setIntroOpen(false)
+                        setJavaBasicOpen(false)
+                        setTaskExamOpen(false)
+                        setObjectMethods(false)
+                        setOopExamOpen(true)
+                    }}
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                            fontSize: '16px'
+                        }}>
+                        {isJavaBasicOpen ? <LessIcon /> : <MoreIcon />}
+                        <p style={{
+                            padding: '0.5rem'
+                        }}> מטלה אובג'קט אוריינטד</p>
                     </Button>
                 </div>
             </div>
@@ -159,47 +188,101 @@ function HomeWork() {
                         <p>צרו קונסטרקטור שמקבל מערך ומאתחל את אותו המשתנה</p>
                         <p>צרו בנוסף קונסטרקטור ריק שמאתחל את המערך עם 10 מספרים רנדומליים</p>
 
-                        <br/>
+                        <br />
 
                         <div style={{
                             padding: '0.5rem',
                             borderRadius: '5px',
                             boxShadow: '0 1px 7px lightgrey'
                         }}>
-                        <p><strong>צרו מתודה שמחזירה בוליאן ונקראת isBalanced</strong></p>
-                        <p>המתודה מקבלת אינט אינדקס</p>
-                        <p>המתודה מחזירה, האם המערך מאוזן או לא בהתאם לאינדקס</p>
+                            <p><strong>צרו מתודה שמחזירה בוליאן ונקראת isBalanced</strong></p>
+                            <p>המתודה מקבלת אינט אינדקס</p>
+                            <p>המתודה מחזירה, האם המערך מאוזן או לא בהתאם לאינדקס</p>
 
-                        <p>זאת אומרת, מוודאה שסכום התאים עד לאינדקס שווה לסכום התאים מהאינדקס עד הסוף</p>
+                            <p>זאת אומרת, מוודאה שסכום התאים עד לאינדקס שווה לסכום התאים מהאינדקס עד הסוף</p>
                         </div>
 
-                        <br/>
+                        <br />
 
                         <div style={{
                             padding: '0.5rem',
                             borderRadius: '5px',
                             boxShadow: '0 1px 7px lightgrey'
                         }}>
-                        <p><strong>צרו מתודה שמחזירה מערך ונקראת getDuplicates</strong></p>
-                        <p>המתודה לא מקבלת כלום</p>
-                        <p>המתודה מחזירה מערך חדש עם כל הכפילויות במערך של האובייקט עצמו</p>
+                            <p><strong>צרו מתודה שמחזירה מערך ונקראת getDuplicates</strong></p>
+                            <p>המתודה לא מקבלת כלום</p>
+                            <p>המתודה מחזירה מערך חדש עם כל הכפילויות במערך של האובייקט עצמו</p>
 
                         </div>
 
-                        <br/>
+                        <br />
 
                         <div style={{
                             padding: '0.5rem',
                             borderRadius: '5px',
                             boxShadow: '0 1px 7px lightgrey'
                         }}>
-                        <p><strong>צרו מתודה שמחזירה אינט howManyIn</strong></p>
-                        <p>המתודה מקבלת מערך</p>
-                        <p>המתודה מחזירה כמה איברים במערך החדש קיימים גם המערך של אותו האובייקט</p>
+                            <p><strong>צרו מתודה שמחזירה אינט howManyIn</strong></p>
+                            <p>המתודה מקבלת מערך</p>
+                            <p>המתודה מחזירה כמה איברים במערך החדש קיימים גם המערך של אותו האובייקט</p>
 
                         </div>
 
 
+                    </div>
+                )
+            },
+            {
+                isOopExamOpen && (
+                    <div style={{
+                        padding: '1rem',
+                        textShadow: '0 0 2px 3px lightgrey'
+                    }}>
+                        <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            direction: 'rtl',
+                        }}>
+                            <div style={boxStyle}>
+                                <p><strong>הכנה למטלת אובג'קט אוריינטד</strong></p>
+                                <a target="_blank" href="https://github.com/EnoshTsur/Java-822-119/tree/master/BeforeTest/src">הפרויקט מהכיתה</a>
+                                <br />
+                                <p>אתחלו 4 וורקפלייס שונים בהתאם למחלקות</p>
+                                <p>בכל אחד מהוורק פלייס, כל המשתנים מאותחלים עם ערכים</p>
+                                <br />
+                                <p>למשל וורק פלייס של קיו איי יהיה מאותחל עם מחלקת קיו איי</p>
+                                <p>בוס קיו איי ומערך של עובדים</p>
+                                <p>חשוב לציין כל המשכורות מאותחלות גם הן בערכים רנדומליים</p>
+                                <p>תאחלו חברה עם שם, ועם כל הוורקפלייס שיצרתם קודם</p>
+
+                            </div>
+
+                            <div style={boxStyle}>
+                                <p><strong>כתבו תוכנית המדפיסה את הנתונים הבאים</strong></p>
+                                <br/>
+                                <p>ממוצע המשכורות של החברה</p>
+                                <p>ממוצע המשכורות עבור כל מחלקה בנפרד, ואיזו מחלקה</p>
+                                <p>מספר העובדים - כולל הבוס בני 22-32 והממוצע שלהם</p>
+                                <p>מספר העובדים בני 34 ומעלה והממוצע שלהם</p>
+                                <p>ממוצע המשכורות של של הבוסים של כל המחלקות</p>
+                                <p>שם העובד הכי נפוץ</p>
+                                <p>העובד הכי מבוגר עם ממוצע המשכורות הכי גבוה</p>
+                                <p>העובד הכי צעיר עם ממוצע המשכורות הכי גבוה</p>
+                            </div>
+                            <div style={boxStyle}>
+                                <p><strong>משכורות</strong></p>
+                                <br/>
+                                <p>עובד פיתוח 14000 - 18000</p>
+                                <p>עובד קיו איי 8000 - 12000</p>
+                                <p>עובד גרפיקה - 12000 - 15000</p>
+                                <p>עובד אייטצ אר 11000- 13000</p>
+                                <br/>
+                                <p>בוס פיתוח 30000 - 32000</p>
+                                <p>בוס קיו איי 14000 - 18000</p>
+                                <p>בוס גרפיקה 16000 - 19000</p>
+                                <p>בוס אייטצ אר 15000 - 17000</p>
+                            </div>
+                        </div>
                     </div>
                 )
             }

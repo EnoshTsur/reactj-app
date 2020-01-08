@@ -154,7 +154,41 @@ const videos = Object.freeze({
         dates: {
             url: 'https://www.youtube.com/embed/5OA68y77DwE',
             text: 'תאריכים'
+        },
+        exceptions: {
+            url: 'https://www.youtube.com/embed/F0o3GvzkbVg',
+            text: 'חריגות'
+        },
+        io: {
+            url: 'https://www.youtube.com/embed/f9vuInDMvHg',
+            text: 'אינפוט אווטפוט'
+        },
+        strategy: {
+            url: 'https://www.youtube.com/embed/XI9BMH9b6bA',
+            text: 'אסטרטגיה'
+        },
+        fint: {
+            url: 'https://www.youtube.com/embed/3EjjgGZfrSM',
+            text: 'אינטרפייס עם מתודה אחת'
+        },
+        comparable: {
+            url: 'https://www.youtube.com/embed/XEyR6hsxF74',
+            text: 'השוואת אובייקטים - קומפראבל'
+        },
+        singleton: {
+            url: 'https://www.youtube.com/embed/JSWgXUwUQs4',
+            text: 'סינגלטון'
+        },
+        threads: {
+            url: 'https://www.youtube.com/embed/eB_C5PDjgHc',
+            text: "ט'רד - מקביליות"
+        },
+        functionalInterface: {
+            url: 'https://www.youtube.com/embed/1EvTKkWKeU0',
+            text: 'פאנקשיונל אינטרפייס'
         }
+
+
     }
 })
 
