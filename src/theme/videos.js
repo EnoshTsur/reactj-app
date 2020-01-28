@@ -187,8 +187,16 @@ const videos = Object.freeze({
             url: 'https://www.youtube.com/embed/1EvTKkWKeU0',
             text: 'פאנקשיונל אינטרפייס'
         }
-
-
+    },
+    sql: {
+        install: {
+            url: 'https://www.youtube.com/embed/oMwsBn2RtiY',
+            text: 'התקנת mysql'
+        },
+        basic: {
+            url: 'https://www.youtube.com/embed/5UiE3LASfUM',
+            text: 'פקודות בסיסיות sql'
+        }
     }
 })
 

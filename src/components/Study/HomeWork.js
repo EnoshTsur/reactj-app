@@ -3,8 +3,9 @@ import classes from './HomeWork.module.css';
 import MoreIcon from '@material-ui/icons/ExpandMore'
 import LessIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button'
+import { maxWidth } from '@material-ui/system';
 
-const boxStyle = isMobile =>  ({
+const boxStyle = isMobile => ({
 
     boxShadow: isMobile ? 'unset' : '0 3px 4px 2px #ccc',
     padding: '1rem',
@@ -19,6 +20,7 @@ function HomeWork() {
     const [isTaskExamOpen, setTaskExamOpen] = React.useState(false);
     const [isObjectMethods, setObjectMethods] = React.useState(false);
     const [isOopExamOpen, setOopExamOpen] = React.useState(false);
+    const [isApiExamOpen, setApiExamOpen] = React.useState(false);
 
     const [isMobile, setMobile] = React.useState(false);
 
@@ -27,6 +29,18 @@ function HomeWork() {
         setMobile(mediaQuery.matches);
         mediaQuery.addListener((mq) => setMobile(mq.matches));
     }, []);
+
+    const setOpenAndCloseOthers = setOpen => {
+        [setIntroOpen,
+            setJavaBasicOpen,
+            setTaskExamOpen,
+            setObjectMethods,
+            setOopExamOpen,
+            setApiExamOpen]
+            .filter(setFunction => setFunction !== setOpen)
+            .forEach(setFunction => setFunction(false))
+        setOpen(true)
+    }
 
     return (
         <div style={{
@@ -44,11 +58,7 @@ function HomeWork() {
                     minWidth: '100%'
                 }}>
                     <Button onClick={() => {
-                        setJavaBasicOpen(false);
-                        setTaskExamOpen(false)
-                        setObjectMethods(false)
-                        setOopExamOpen(false)
-                        setIntroOpen(true)
+                        setOpenAndCloseOthers(setIntroOpen)
                     }}
                         style={{
                             fontFamily: "Varela Round, sans-serif",
@@ -61,11 +71,7 @@ function HomeWork() {
                     </Button>
 
                     <Button onClick={() => {
-                        setIntroOpen(false)
-                        setTaskExamOpen(false)
-                        setObjectMethods(false)
-                        setOopExamOpen(false)
-                        setJavaBasicOpen(true)
+                        setOpenAndCloseOthers(setJavaBasicOpen)
                     }}
                         style={{
                             fontFamily: "Varela Round, sans-serif",
@@ -77,52 +83,52 @@ function HomeWork() {
                         }}> ג'אווה בייסיק</p>
                     </Button>
                     <Button onClick={() => {
-                        setIntroOpen(false)
-                        setJavaBasicOpen(false)
-                        setObjectMethods(false)
-                        setOopExamOpen(false)
-                        setTaskExamOpen(true)
+                        setOpenAndCloseOthers(setTaskExamOpen)
                     }}
                         style={{
                             fontFamily: "Varela Round, sans-serif",
                             fontSize: '16px'
                         }}>
-                        {isJavaBasicOpen ? <LessIcon /> : <MoreIcon />}
+                        {isTaskExamOpen ? <LessIcon /> : <MoreIcon />}
                         <p style={{
                             padding: '0.5rem'
                         }}> משימה לקראת מבחן</p>
                     </Button>
                     <Button onClick={() => {
-                        setIntroOpen(false)
-                        setJavaBasicOpen(false)
-                        setTaskExamOpen(false)
-                        setOopExamOpen(false)
-                        setObjectMethods(true)
+                        setOpenAndCloseOthers(setObjectMethods)
                     }}
                         style={{
                             fontFamily: "Varela Round, sans-serif",
                             fontSize: '16px'
                         }}>
-                        {isJavaBasicOpen ? <LessIcon /> : <MoreIcon />}
+                        {isObjectMethods ? <LessIcon /> : <MoreIcon />}
                         <p style={{
                             padding: '0.5rem'
                         }}> אובייקטים ומתודות</p>
                     </Button>
                     <Button onClick={() => {
-                        setIntroOpen(false)
-                        setJavaBasicOpen(false)
-                        setTaskExamOpen(false)
-                        setObjectMethods(false)
-                        setOopExamOpen(true)
+                        setOpenAndCloseOthers(setOopExamOpen)
                     }}
                         style={{
                             fontFamily: "Varela Round, sans-serif",
                             fontSize: '16px'
                         }}>
-                        {isJavaBasicOpen ? <LessIcon /> : <MoreIcon />}
+                        {isOopExamOpen ? <LessIcon /> : <MoreIcon />}
                         <p style={{
                             padding: '0.5rem'
                         }}> מטלה אובג'קט אוריינטד</p>
+                    </Button>
+                    <Button onClick={() => {
+                        setOpenAndCloseOthers(setApiExamOpen)
+                    }}
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                            fontSize: '16px'
+                        }}>
+                        {isApiExamOpen ? <LessIcon /> : <MoreIcon />}
+                        <p style={{
+                            padding: '0.5rem'
+                        }}> מטלה ג'אווה איי פי איי</p>
                     </Button>
                 </div>
             </div>
@@ -267,7 +273,7 @@ function HomeWork() {
 
                             <div style={boxStyle(isMobile)}>
                                 <p><strong>כתבו תוכנית המדפיסה את הנתונים הבאים</strong></p>
-                                <br/>
+                                <br />
                                 <p>ממוצע המשכורות של החברה</p>
                                 <p>ממוצע המשכורות עבור כל מחלקה בנפרד, ואיזו מחלקה</p>
                                 <p>מספר העובדים - כולל הבוס בני 22-32 והממוצע שלהם</p>
@@ -279,12 +285,12 @@ function HomeWork() {
                             </div>
                             <div style={boxStyle(isMobile)}>
                                 <p><strong>משכורות</strong></p>
-                                <br/>
+                                <br />
                                 <p>עובד פיתוח 14000 - 18000</p>
                                 <p>עובד קיו איי 8000 - 12000</p>
                                 <p>עובד גרפיקה - 12000 - 15000</p>
                                 <p>עובד אייטצ אר 11000- 13000</p>
-                                <br/>
+                                <br />
                                 <p>בוס פיתוח 30000 - 32000</p>
                                 <p>בוס קיו איי 14000 - 18000</p>
                                 <p>בוס גרפיקה 16000 - 19000</p>
@@ -294,6 +300,69 @@ function HomeWork() {
                     </div>
                 )
             }
+            {
+                isApiExamOpen && (
+                    <div>
+                        <div style={{ marginRight: '1rem' }}>
+                            <p><strong>כתבו שעון מעורר למאור</strong></p>
+                            <br />
+                            <p>על התוכנית להתריע את מאור שמגיעה שעת התזכורת</p>
+                            <p>זאת אומרת, כל עוד עכשיו בין התחלת התזכורת וסופה</p>
+                            <p>וכל עוד, מאור לא צפה בתזכורת</p>
+                            <p>מאור יוכל לצפות בכל התזכורות ממוינות מהשעה המוקדמת ביותר</p>
+                            <p>להוסיף תזכורת חדשה בכל עת</p>
+                            <p>ולסיים את הריצה</p>
+                            <br />
+                        </div>
+
+
+                        <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            direction: 'rtl',
+                        }}>
+                            <div style={{...boxStyle(isMobile), textAlign: 'left', direction: 'rtl'}}>
+                                <h3>Reminder implements Comparable</h3>
+                                <hr />
+                                <p>- start: LocalTime</p>
+                                <p>- stop: LocalTime</p>
+                                <p>- message: String</p>
+                                <p>- seen: boolean</p>
+                                <hr />
+                                <p>+ Reminder(time, message) seen = false</p>
+                                <p>+ getters & setters</p>
+                                <p>+ to string</p>
+                                <p>+ hascode & equals</p>
+                                <p>+ compareTo</p>
+                                <p></p>
+                            </div>
+                            <div style={{...boxStyle(isMobile), textAlign: 'left', direction: 'rtl'}}>
+                                <h3>ReminderTask implements Runnable</h3>
+                                <hr />
+                                <p>- reminders: Set - Reminder</p>
+                                <hr />
+                                <p>+ ReminderTask(reminders)</p>
+                                <p>+ getters & setters</p>
+                                <p>+ run</p>
+                                <p></p>
+                            </div>
+                            <div style={{...boxStyle(isMobile), textAlign: 'left', direction: 'rtl'}}>
+                                <h3>ReminderSystem</h3>
+                                <hr />
+                                <p>- task: ReminderTask</p>
+                                <p>- thread: Thread</p>
+                                <hr />
+                                <p>+ ReminderSystem() initial 4 task reminders, task, thread</p>
+                                <p>+ getters & setters</p>
+                                <p>+ getReminders: sorted List Reminder</p>
+                                <p>+ addReminder: boolean isSuccess</p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+
         </div>
     )
 }

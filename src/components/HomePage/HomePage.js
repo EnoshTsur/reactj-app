@@ -33,19 +33,17 @@ function Home() {
                 margin: '0 auto',
                 display: 'flex',
                 justifyContent: 'flex-end',
-                textAlign: 'right'
+                textAlign: 'right',
+                fontFamily: "Varela Round, sans-serif"
+
             }}>
-                <article>
+                <article style={{
+                            fontFamily: "Varela Round, sans-serif"
+                        }}>
                     <h3>חדשות</h3>
                     <hr />
                     <ol dir="rtl">
-                        <li>סרטון חדש בנושא קומפראבול</li>
-                        <br />
-                        <li>סרטון חדש בנושא סינגלטון</li>
-                        <br />
-                        <li>סרטון חדש בנושא ט'רדים ומקביליות</li>
-                        <br />
-                        <li>סרטון חדש בנושא פנקשיונל אינטרפייס</li>
+                        <li>שיעורי בית - מטלה לקראת מבחן ג'אווה איי פי איי</li>
                     </ol>
                 </article>
             </div>
