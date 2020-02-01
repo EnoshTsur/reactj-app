@@ -14,6 +14,8 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const javaBasicVideos = Object.values(videos.basicJava);
     const bankOverview = Object.values(videos.bank);
     const sqlVideos = Object.values(videos.sql);
+    const taskVideos = Object.values(videos.reminder);
+    const jdbcVideos = Object.values(videos.jdbc);
 
     // The Menu
     const sideList = (
@@ -22,6 +24,28 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                 <CloseIcon />
             </Button>
             <List>
+
+            <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="JDBC"
+                        data={jdbcVideos}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
+
+            <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="Reminer Task"
+                        data={taskVideos}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
 
             <ListItem button>
                     <ExpendedList

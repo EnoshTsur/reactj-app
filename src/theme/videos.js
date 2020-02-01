@@ -196,6 +196,24 @@ const videos = Object.freeze({
         basic: {
             url: 'https://www.youtube.com/embed/5UiE3LASfUM',
             text: 'פקודות בסיסיות sql'
+        },
+        joins: {
+            url: 'https://www.youtube.com/embed/pwkGs7m7kfc',
+            text: "טבלאות ג'וין"
+        }
+    },
+
+    reminder: {
+        task: {
+            url: 'https://www.youtube.com/embed/kb1hSyi9FBU',
+            text: 'מטלת תזכורת'
+        }
+    },
+
+    jdbc: {
+        statement: {
+            url: 'https://www.youtube.com/embed/zpqFgyd4CbM',
+            text: 'חיבור לדאטא בייס והרצת שאילתות'
         }
     }
 })

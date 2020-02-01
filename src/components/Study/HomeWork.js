@@ -21,6 +21,7 @@ function HomeWork() {
     const [isObjectMethods, setObjectMethods] = React.useState(false);
     const [isOopExamOpen, setOopExamOpen] = React.useState(false);
     const [isApiExamOpen, setApiExamOpen] = React.useState(false);
+    const [isJdbcOpen, setJdbcOpen] = React.useState(false);
 
     const [isMobile, setMobile] = React.useState(false);
 
@@ -36,7 +37,8 @@ function HomeWork() {
             setTaskExamOpen,
             setObjectMethods,
             setOopExamOpen,
-            setApiExamOpen]
+            setApiExamOpen,
+            setJdbcOpen]
             .filter(setFunction => setFunction !== setOpen)
             .forEach(setFunction => setFunction(false))
         setOpen(true)
@@ -129,6 +131,18 @@ function HomeWork() {
                         <p style={{
                             padding: '0.5rem'
                         }}> מטלה ג'אווה איי פי איי</p>
+                    </Button>
+                    <Button onClick={() => {
+                        setOpenAndCloseOthers(setJdbcOpen)
+                    }}
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                            fontSize: '16px'
+                        }}>
+                        {isJdbcOpen ? <LessIcon /> : <MoreIcon />}
+                        <p style={{
+                            padding: '0.5rem'
+                        }}> שיעורי בית ג'יי די בי סי</p>
                     </Button>
                 </div>
             </div>
@@ -358,6 +372,57 @@ function HomeWork() {
                                 <p>+ addReminder: boolean isSuccess</p>
                                 <p></p>
                             </div>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                isJdbcOpen && (
+                    <div>
+                        <div style={{ marginRight: '2rem' }}>
+                            <p><strong>User DAO - Data Access Object</strong></p>
+                            <br />
+                            <p>כתבו קלאס המדבר עם הדאטא בייס באמצעות JDBC</p>
+                            <p>לאותו האובייקט יהיה משתנה מסוג קונקשן שדרכו הוא יתחבר לדאטא בייס</p>
+                            <p>הקונקשן יאותחל בתוך הקונסטרקטור וכל המתודות יוכלו להשתמש בו</p>
+                            <br/>
+                            <a 
+                            target="_blank" 
+                            href="https://github.com/EnoshTsur/Java-822-119/blob/master/JDBC/src/main/java/jdbc/run/Main.java"
+                            >דוגמא</a>
+
+                            <p><strong>המתודות</strong></p>
+                            <ol dir="rtl">
+                                <li><p>קבלת כל היוזרים מהדאטה בייס לתוך ליסט</p></li>
+                                <li><p>קבלת יוזר לפי איידי</p></li>
+                                <li><p>קבלת יוזרים לפי שם פרטי ושם משפחה</p></li>
+                                <li><p>הוספת יוזר חדש אם לא קיים לפי שם פרטי ושם משפחה</p></li>
+                                <li><p>עדכון שם פרטי ושם משפה של יוזר לפי איידי</p></li>
+                                <li><p>מחיקת יוזר לפי איידי רק אם קיים</p></li>
+                            </ol>
+                            <br />
+                        </div>
+
+
+                        <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            direction: 'rtl',
+                        }}>
+                            <div style={{...boxStyle(isMobile), textAlign: 'left', direction: 'rtl'}}>
+                                <h3>UserDao</h3>
+                                <hr />
+                                <p>- connection: Connection</p>
+                                <hr />
+                                <p>+ UserDao() connection = DriverManager.getConnection</p>
+                                <p>+ List User getAllUsers</p>
+                                <p>+ User (int id) </p>
+                                <p>+ List User (String firstName, String lastName)</p>
+                                <p>+ void update(String firstName, String lastName, int id)</p>
+                                <p>+ void delete(int id)</p>
+                                <p></p>
+                            </div>
+                           
                         </div>
                     </div>
                 )
