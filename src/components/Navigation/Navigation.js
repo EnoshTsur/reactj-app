@@ -5,11 +5,10 @@ import School from '@material-ui/icons/School';
 import Key from '@material-ui/icons/VpnKey';
 import Home from '@material-ui/icons/Home';
 import Code from '@material-ui/icons/Code';
-import { DefalutIconButton, StyledIconButton } from '../IconButton/IconButton';
+import { DefalutIconButton, } from '../IconButton/IconButton';
 import { HashRouter, Link } from 'react-router-dom';
 import classes from './Navigation.module.css';
 import BlackAlert from '../BlackAlert/BlackAlert';
-import { navigateTo,} from '../../theme/utils';
 
 
 function Navigation({ history, }) {

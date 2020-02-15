@@ -3,7 +3,6 @@ import classes from './HomeWork.module.css';
 import MoreIcon from '@material-ui/icons/ExpandMore'
 import LessIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button'
-import { maxWidth } from '@material-ui/system';
 
 const boxStyle = isMobile => ({
 

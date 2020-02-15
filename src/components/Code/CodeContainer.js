@@ -4,9 +4,6 @@ import codes from '../../theme/codes';
 import Code from './Code';
 import Button from '@material-ui/core/Button';
 import { getPreviousCode, } from '../../code/code';
-import Radium from 'radium';
-import CommonGist from '../CommonGist/CommonGist';
-import createMapper from '../../theme/createMapper';
 
 
 

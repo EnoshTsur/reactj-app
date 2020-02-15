@@ -16,6 +16,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const sqlVideos = Object.values(videos.sql);
     const taskVideos = Object.values(videos.reminder);
     const jdbcVideos = Object.values(videos.jdbc);
+    const springVideos = Object.values(videos.spring);
 
     // The Menu
     const sideList = (
@@ -24,6 +25,17 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                 <CloseIcon />
             </Button>
             <List>
+
+            <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="Spring"
+                        data={springVideos}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
 
             <ListItem button>
                     <ExpendedList

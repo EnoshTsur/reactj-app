@@ -214,6 +214,16 @@ const videos = Object.freeze({
         statement: {
             url: 'https://www.youtube.com/embed/zpqFgyd4CbM',
             text: 'חיבור לדאטא בייס והרצת שאילתות'
+        },
+        coupons: {
+            url: 'https://www.youtube.com/embed/O1EMS41SXB0',
+            text: "ג'יי די בי סי קופונים"
+        }
+    },
+    spring: {
+        core: {
+            url: 'https://www.youtube.com/embed/xDlL9Cl9DvE',
+            text: 'אפליקיישן קונטקסט אקסמל'
         }
     }
 })
