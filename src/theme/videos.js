@@ -218,12 +218,20 @@ const videos = Object.freeze({
         coupons: {
             url: 'https://www.youtube.com/embed/O1EMS41SXB0',
             text: "ג'יי די בי סי קופונים"
+        },
+        coupons2: {
+            url: "https://www.youtube.com/embed/Gz4UVeB16cE",
+            text: 'קופנים - המשך'
         }
     },
     spring: {
         core: {
             url: 'https://www.youtube.com/embed/xDlL9Cl9DvE',
             text: 'אפליקיישן קונטקסט אקסמל'
+        },
+        beans: {
+            url: 'https://www.youtube.com/embed/NRVmiVulY2U',
+            text: 'ספרינג בינים ללא אקס אמ אל'
         }
     }
 })
