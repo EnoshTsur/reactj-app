@@ -232,6 +232,18 @@ const videos = Object.freeze({
         beans: {
             url: 'https://www.youtube.com/embed/NRVmiVulY2U',
             text: 'ספרינג בינים ללא אקס אמ אל'
+        },
+        propetySource: {
+            url: 'https://www.youtube.com/embed/W8oABAwTrIU',
+            text: 'קובץ קונפיגורציה חיצוני'
+        },
+        restController: {
+            url: 'https://www.youtube.com/embed/zx5VTUGemR0',
+            text: 'רסט קונטרולר'
+        },
+        entities1: {
+            url: 'https://www.youtube.com/embed/fnt1-wr1T6c',
+            text: "ג'יי פי איי קונפיגורציה וטסטים"
         }
     }
 })
