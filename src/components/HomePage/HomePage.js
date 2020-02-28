@@ -43,8 +43,13 @@ function Home() {
                     <h3>חדשות</h3>
                     <hr />
                     <ol dir="rtl">
-                        <li>סרטון חדש בנושא ג'יי די בי סי קופונים</li>
-                        <li>סרטון חדש בנושא ספרינג </li>
+                        <li>סרטון חדש בנושא ג'יי פי איי קונפיגורציה וטסטים </li>
+                        <br />
+                        <li>סרטון חדש בנושא ג'יי פי איי אנטיטי מנג'ר </li>
+                        <br />
+                        <li>סרטון חדש בנושא קובץ קונפיגורציה חיצוני</li>
+                        <br />
+                        <li>סרטון חדש בנושא רסט קונטרולר </li>
                     </ol>
                 </article>
             </div>
@@ -53,3 +58,23 @@ function Home() {
 }
 
 export default Home
+
+
+/*
+ propetySource: {
+            url: 'https://www.youtube.com/embed/W8oABAwTrIU',
+            text: 'קובץ קונפיגורציה חיצוני'
+        },
+        restController: {
+            url: 'https://www.youtube.com/embed/zx5VTUGemR0',
+            text: 'רסט קונטרולר'
+        },
+        entities1: {
+            url: 'https://www.youtube.com/embed/fnt1-wr1T6c',
+            text: "ג'יי פי איי קונפיגורציה וטסטים"
+        },
+        entityManager: {
+            url: 'https://www.youtube.com/embed/iwTzetLTEx0',
+            text: "ג'יי פי איי אנטיטי מנג'ר"
+        }
+*/

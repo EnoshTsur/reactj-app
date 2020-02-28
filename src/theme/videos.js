@@ -244,6 +244,10 @@ const videos = Object.freeze({
         entities1: {
             url: 'https://www.youtube.com/embed/fnt1-wr1T6c',
             text: "ג'יי פי איי קונפיגורציה וטסטים"
+        },
+        entityManager: {
+            url: 'https://www.youtube.com/embed/iwTzetLTEx0',
+            text: "ג'יי פי איי אנטיטי מנג'ר"
         }
     }
 })
