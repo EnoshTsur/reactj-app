@@ -248,6 +248,11 @@ const videos = Object.freeze({
         entityManager: {
             url: 'https://www.youtube.com/embed/iwTzetLTEx0',
             text: "ג'יי פי איי אנטיטי מנג'ר"
+        },
+
+        jpaOneToOne: {
+            url: 'https://www.youtube.com/embed/8wGhINgccGM',
+            text: "ג'יי פי איי עם - אחד על אחד עם תרגול"
         }
     }
 })
