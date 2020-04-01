@@ -256,7 +256,7 @@ const phases = username => Object.freeze({
             "const avner = friends.pop()",
             "// Yeah we dont have to save it to a new const, but we sure can.",
             "// If we want to remove the first item, we can use 'shift'",
-            "// 'shit' also going to return us the item, so we can save it",
+            "// 'shift' also going to return us the item, so we can save it",
             "const itay = friends.shift()",
             "// As i have mention, you don't have to save the removed item:",
             "friends.pop() // legal",
