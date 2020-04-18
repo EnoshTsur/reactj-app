@@ -17,6 +17,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const taskVideos = Object.values(videos.reminder);
     const jdbcVideos = Object.values(videos.jdbc);
     const springVideos = Object.values(videos.spring);
+    const functional = Object.values(videos.functional);
 
     // The Menu
     const sideList = (
@@ -26,7 +27,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
             </Button>
             <List>
 
-            <ListItem button>
+                <ListItem button>
                     <ExpendedList
                         style={{
                             fontFamily: "Varela Round, sans-serif",
@@ -37,7 +38,18 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                     />
                 </ListItem>
 
-            <ListItem button>
+                <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="Functional"
+                        data={functional}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
+
+                <ListItem button>
                     <ExpendedList
                         style={{
                             fontFamily: "Varela Round, sans-serif",
@@ -48,7 +60,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                     />
                 </ListItem>
 
-            <ListItem button>
+                <ListItem button>
                     <ExpendedList
                         style={{
                             fontFamily: "Varela Round, sans-serif",
@@ -59,7 +71,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                     />
                 </ListItem>
 
-            <ListItem button>
+                <ListItem button>
                     <ExpendedList
                         style={{
                             fontFamily: "Varela Round, sans-serif",

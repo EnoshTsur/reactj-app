@@ -253,6 +253,18 @@ const videos = Object.freeze({
         jpaOneToOne: {
             url: 'https://www.youtube.com/embed/8wGhINgccGM',
             text: "ג'יי פי איי עם - אחד על אחד עם תרגול"
+        },
+
+        fullFlow: {
+            url: 'https://www.youtube.com/embed/tgRiIeYLSPo',
+            text: 'אנטיטי ריפוזיטורי טסט ורסט קונטרולר'
+        }
+    },
+
+    functional: {
+        intro: {
+            url: 'https://www.youtube.com/embed/SHCY5yThzkg',
+            text: 'אינטרפייס פוקנציונלי אופשנל וסטרים'
         }
     }
 })
