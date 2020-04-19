@@ -266,6 +266,18 @@ const videos = Object.freeze({
             url: 'https://www.youtube.com/embed/SHCY5yThzkg',
             text: 'אינטרפייס פוקנציונלי אופשנל וסטרים'
         }
+    },
+
+    designPatterns: {
+        strategy: {
+            url: 'https://www.youtube.com/embed/dCAIh10_lo4',
+            text: 'אסטרטגיה'
+        },
+
+        builder: {
+            url: 'https://www.youtube.com/embed/GqY0kGBpW20',
+            text: 'בילדר'
+        }
     }
 })
 

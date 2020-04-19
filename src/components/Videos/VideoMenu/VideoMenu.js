@@ -18,6 +18,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const jdbcVideos = Object.values(videos.jdbc);
     const springVideos = Object.values(videos.spring);
     const functional = Object.values(videos.functional);
+    const dp = Object.values(videos.designPatterns);
 
     // The Menu
     const sideList = (
@@ -45,6 +46,17 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                         }}
                         text="Functional"
                         data={functional}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
+
+                <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="Design patterns"
+                        data={dp}
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>
