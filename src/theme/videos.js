@@ -258,6 +258,11 @@ const videos = Object.freeze({
         fullFlow: {
             url: 'https://www.youtube.com/embed/tgRiIeYLSPo',
             text: 'אנטיטי ריפוזיטורי טסט ורסט קונטרולר'
+        },
+
+        joinTableAndClr: {
+            url: 'https://www.youtube.com/embed/Eh7HpQ7E4Bg',
+            text: "טבלת ג'וין וקומנד ליין ראנר"
         }
     },
 
@@ -277,6 +282,11 @@ const videos = Object.freeze({
         builder: {
             url: 'https://www.youtube.com/embed/GqY0kGBpW20',
             text: 'בילדר'
+        },
+
+        singleton: {
+            url: 'https://www.youtube.com/embed/67QPuX7VDQ4',
+            text: 'סינגלטון'
         }
     }
 })
