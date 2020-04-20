@@ -263,6 +263,11 @@ const videos = Object.freeze({
         joinTableAndClr: {
             url: 'https://www.youtube.com/embed/Eh7HpQ7E4Bg',
             text: "טבלת ג'וין וקומנד ליין ראנר"
+        },
+
+        h2Console: {
+            url: 'https://www.youtube.com/embed/FP41HQto46o',
+            text: 'H2 דאטא בייס'
         }
     },
 
