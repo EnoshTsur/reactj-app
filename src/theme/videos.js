@@ -237,6 +237,10 @@ const videos = Object.freeze({
             url: 'https://www.youtube.com/embed/W8oABAwTrIU',
             text: 'קובץ קונפיגורציה חיצוני'
         },
+        springComponents: {
+            url: 'https://www.youtube.com/embed/5kaA9jSZ-44',
+            text: 'קומפוננטות של ספרינג'
+        },
         restController: {
             url: 'https://www.youtube.com/embed/zx5VTUGemR0',
             text: 'רסט קונטרולר'
