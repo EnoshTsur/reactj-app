@@ -272,6 +272,20 @@ const videos = Object.freeze({
         h2Console: {
             url: 'https://www.youtube.com/embed/FP41HQto46o',
             text: 'H2 דאטא בייס'
+        },
+        thymeLeaf1: {
+            url: 'https://www.youtube.com/embed/J9L0pYCgJAI',
+            text: 'טיימליף חלק ראשון'
+        },
+
+        thymeLeaf2: {
+            url: 'https://www.youtube.com/embed/sHHLolswV9E',
+            text: 'טיימליף חלק שני'
+        },
+
+        multiModule: {
+            url: 'https://www.youtube.com/embed/RquT0WOQV1c',
+            text: 'פרוייקט רב מודולים'
         }
     },
 
