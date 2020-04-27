@@ -293,6 +293,14 @@ const videos = Object.freeze({
         intro: {
             url: 'https://www.youtube.com/embed/SHCY5yThzkg',
             text: 'אינטרפייס פוקנציונלי אופשנל וסטרים'
+        },
+        optional1: {
+            url: 'https://www.youtube.com/embed/Gwgg2PGQXEA',
+            text: 'אופציונל חלק ראשון'
+        },
+        optional2: {
+            url: 'https://www.youtube.com/embed/cpi17b3PzNo',
+            text: 'אופציונל חלק שני'
         }
     },
 
