@@ -318,7 +318,13 @@ const videos = Object.freeze({
         singleton: {
             url: 'https://www.youtube.com/embed/67QPuX7VDQ4',
             text: 'סינגלטון'
+        },
+
+        factory: {
+            url: 'https://www.youtube.com/embed/I-rVYFZTRLY',
+            text: 'פקטורי'
         }
+
     }
 })
 
