@@ -292,7 +292,7 @@ const videos = Object.freeze({
     functional: {
         intro: {
             url: 'https://www.youtube.com/embed/SHCY5yThzkg',
-            text: 'אינטרפייס פוקנציונלי אופשנל וסטרים'
+            text: 'אינטרפייס פוקנציונלי אופציונל וסטרים'
         },
         optional1: {
             url: 'https://www.youtube.com/embed/Gwgg2PGQXEA',
