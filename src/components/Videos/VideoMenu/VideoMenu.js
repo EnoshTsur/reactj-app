@@ -19,6 +19,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const springVideos = Object.values(videos.spring);
     const functional = Object.values(videos.functional);
     const dp = Object.values(videos.designPatterns);
+    const javascript = Object.values(videos.javascript);
 
     // The Menu
     const sideList = (
@@ -35,6 +36,17 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                         }}
                         text="Spring"
                         data={springVideos}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
+
+                <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="Java Script"
+                        data={javascript}
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>

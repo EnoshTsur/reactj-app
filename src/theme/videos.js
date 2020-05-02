@@ -325,6 +325,24 @@ const videos = Object.freeze({
             text: 'פקטורי'
         }
 
+    },
+
+    javascript: {
+        basics1: {
+            url: 'https://www.youtube.com/embed/MSJlJqDvLxM',
+            text: "ג'אווה סקריפט חלק 1"
+        },
+
+        basics2: {
+            url: 'https://www.youtube.com/embed/lxNDzVzy7oE',
+            text: "ג'אווה סקריפט חלק 2"
+        },
+
+        withHtml: {
+            url: 'https://www.youtube.com/embed/57rSf4DY0Yg',
+            text: "ג'אווה סקריפט עם HTML"
+        }
+
     }
 })
 
