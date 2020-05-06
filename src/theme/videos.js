@@ -323,6 +323,11 @@ const videos = Object.freeze({
         factory: {
             url: 'https://www.youtube.com/embed/I-rVYFZTRLY',
             text: 'פקטורי'
+        },
+
+        validator: {
+            url: 'https://www.youtube.com/embed/U3xz6FTjjMs',
+            text: 'ואלידטור'
         }
 
     },
