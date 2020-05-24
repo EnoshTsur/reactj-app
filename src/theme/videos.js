@@ -348,6 +348,14 @@ const videos = Object.freeze({
             text: "ג'אווה סקריפט עם HTML"
         }
 
+    },
+    dataStructures: {
+
+        arraysBubbleSort: {
+            url: 'https://www.youtube.com/embed/oUOmLzmy1dc',
+            text: 'מערכים - בבל סורט'
+        },
+    
     }
 })
 

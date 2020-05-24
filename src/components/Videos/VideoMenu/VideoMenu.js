@@ -20,6 +20,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const functional = Object.values(videos.functional);
     const dp = Object.values(videos.designPatterns);
     const javascript = Object.values(videos.javascript);
+    const dataStructures = Object.values(videos.dataStructures);
 
     // The Menu
     const sideList = (
@@ -47,6 +48,17 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                         }}
                         text="Java Script"
                         data={javascript}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
+
+                <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="Data Structures"
+                        data={dataStructures}
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>
