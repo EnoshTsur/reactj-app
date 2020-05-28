@@ -356,6 +356,14 @@ const videos = Object.freeze({
             text: 'מערכים - בבל סורט'
         },
     
+    },
+
+    react: {
+
+        reactBasic: {
+            url: 'https://www.youtube.com/embed/AkgQvumcKqI',
+            text: 'יצירת פרוייקט וקומפוננטות'
+        }
     }
 })
 
