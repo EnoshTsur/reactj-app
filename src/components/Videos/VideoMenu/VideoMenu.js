@@ -22,6 +22,7 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
     const javascript = Object.values(videos.javascript);
     const dataStructures = Object.values(videos.dataStructures);
     const react = Object.values(videos.react);
+    const reactTs = Object.values(videos.reactTs);
 
     // The Menu
     const sideList = (
@@ -49,6 +50,17 @@ function VideoMenu({ videos, isOpen, toggleOpen, setCurrentVideo, }) {
                         }}
                         text="React"
                         data={react}
+                        setCurrentVideo={setCurrentVideo}
+                    />
+                </ListItem>
+
+                <ListItem button>
+                    <ExpendedList
+                        style={{
+                            fontFamily: "Varela Round, sans-serif",
+                        }}
+                        text="React TypeScript"
+                        data={reactTs}
                         setCurrentVideo={setCurrentVideo}
                     />
                 </ListItem>

@@ -111,7 +111,7 @@ const videos = Object.freeze({
             url: 'https://www.youtube.com/embed/yYWms2BxkDA',
             text: 'קונסטרקטור אוברלאוד ומתודות'
         },
-        gettersAndSetters :{
+        gettersAndSetters: {
             url: 'https://www.youtube.com/embed/JXZ937p278U',
             text: 'גטרים וסטרים'
         },
@@ -355,7 +355,7 @@ const videos = Object.freeze({
             url: 'https://www.youtube.com/embed/oUOmLzmy1dc',
             text: 'מערכים - בבל סורט'
         },
-    
+
     },
 
     react: {
@@ -363,6 +363,24 @@ const videos = Object.freeze({
         reactBasic: {
             url: 'https://www.youtube.com/embed/AkgQvumcKqI',
             text: 'יצירת פרוייקט וקומפוננטות'
+        },
+
+        classComponent: {
+            url: 'https://www.youtube.com/embed/--6LYwIyhT0',
+            text: 'קלאס קומפוננט'
+        },
+
+        style: {
+            url: 'https://www.youtube.com/embed/Bfk5BpKxSN4',
+            text: 'עיצוב'
+        }
+    },
+
+    reactTs: {
+
+        reactBasic: {
+            url: 'https://www.youtube.com/embed/mL19p8-tpqQ',
+            text: 'ריאקט מהבסיס'
         }
     }
 })
