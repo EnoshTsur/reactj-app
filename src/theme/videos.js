@@ -373,7 +373,28 @@ const videos = Object.freeze({
         style: {
             url: 'https://www.youtube.com/embed/Bfk5BpKxSN4',
             text: 'עיצוב'
+        },
+
+        useRefAndEffect: {
+            url: 'https://www.youtube.com/embed/6RK_QazvzLc',
+            text: 'יוז אפקט ויוז רף'
+        },
+
+        hocAndrenderProps: {
+            url: 'https://www.youtube.com/embed/nVfyAPcktZY',
+            text: 'hoc ורנדר פרופס'
+        },
+
+        reactrouter: {
+            url: 'https://www.youtube.com/embed/KPYrY_Ieinw',
+            text: 'ריאקט ראוטר'
+        },
+
+        reactcontext: {
+            url: 'https://www.youtube.com/embed/duMOaxX5ekI',
+            text: 'ריאקט קונטקסט'
         }
+
     },
 
     reactTs: {
